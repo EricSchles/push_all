@@ -1,0 +1,13 @@
+import os
+from sys import argv
+
+for root,dirs,files in os.walk(argv[1]):
+    #print dirs
+    os.path.exists(".git")
+    for Dir in dirs:        
+        original = os.getcwd()
+        os.chdir(os.path.join(os.getcwd(),root,Dir))
+        if os.path.exists(".git"):
+            
+        os.chdir(original)
+
